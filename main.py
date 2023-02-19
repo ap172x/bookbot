@@ -5,5 +5,12 @@ with open('books/frankenstein.txt') as f:
     alphabet = {}
     for word in words:
         count += 1
+        for letter in word:
+            x = letter.lower()
+            if x in alphabet:
+                alphabet[x] += 1
+            else:
+                alphabet[x] = 1
     print(count)
+    print(alphabet)
 
